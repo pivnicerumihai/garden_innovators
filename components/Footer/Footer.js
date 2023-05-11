@@ -7,9 +7,11 @@ import {FaInstagram} from "react-icons/fa";
 function Footer() {
 
     return(
-        <footer className="bg-primary w-11/12 h-[300px] mt-10 flex flex-row items-center justify-evenly">
+        <footer className="bg-primary w-11/12 h-[300px] mt-10 flex flex-row justify-evenly rounded-3xl">
+            <div className="rounded-3xl overflow-hidden">
             <Image src="/images/logox.png" alt="logo" width={250} height={100} />
-            <div className="flex flex-col  justify-center">
+</div>
+            <div className="flex flex-col mt-10">
                 <p className="text-white text-2xl font-bold mb-2">Contact Us</p>
                 <p className="text-white text-sm ">123 Main Street
                 Anytown,<br/> USA 12345 <br/> <b>Name:</b> John Doe <br/>
@@ -20,7 +22,7 @@ function Footer() {
                 <RiFacebookBoxFill color="#4267B2" size="2em" className="mx-2"/> <FaTiktok size="2em" color="white" className="mx-2"/> <FaInstagram size="2em" color="#C13584" className="mx-2"/>
                 </div>
                 </div>
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col  mt-10">
                     <p className="text-white text-2xl font-bold">Links</p>
                     <br/>
                     <p className="text-white text-sm text-center">Home
@@ -28,7 +30,7 @@ function Footer() {
                 About Us </p>
                 
                     </div>
-                    <div className="flex flex-col items-center justify-center">
+                    <div className="flex flex-col  mt-10">
                     <p className="text-white text-2xl font-bold">Legal Information</p>
                     <br/>
                     <p className="text-white text-sm text-center">Terms & Conditions<br/>Privacy Policy
