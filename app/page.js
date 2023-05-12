@@ -79,7 +79,10 @@ export default function Home() {
           ]}
         />
       </div>
-      <GallerySlide images={images} />
+      <GallerySlide images={images} 
+      description={<>Our gallery is a testament to the hard work and dedication we put into every project. With every garden design and maintenance task, we pour our heart and soul into creating outdoor spaces that are not just beautiful, but also functional and sustainable. <br/> <br/> Our portfolio showcases the incredible results of this commitment - from lush greenery and vibrant flowers to elegant hardscaping and thoughtful water features. We believe that your outdoor space should be an extension of your home and your personal style, and we work tirelessly to make that vision a reality.</>} 
+      title={'Portfolio Preview'}
+      />
       <Footer />
     </div>
   );
