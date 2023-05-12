@@ -28,7 +28,7 @@ const images_2 = [{
   url: "/images/portfolio_tiles_4.png",
   alt:'tiles_4'
 },];
-export default function Portfolio() {
+export default function Services() {
   return (
     <div className="flex flex-col items-center ">
    <Header />
