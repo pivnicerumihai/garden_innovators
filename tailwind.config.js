@@ -5,19 +5,21 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor:{
-        'primary': '#79b473',
+        'primary': '#6ca7f5',
         'secondary': '#FFFFFF',
-        'accent': '#70A37F',
+        'accent': '#6ca7f5',
       },
       textColor:{
         'primary': '#12130F',
         'secondary': '#3B413C',
-        'accent': '#70A37F',
+        'accent': '#6ca7f5',
       },
       accentColor:{      'primary': '#70A37F'},
       fontFamily:{'rubik': 'Rubik, sans-serif', 'freehand': 'Freehand, cursive'},
       backdropBlur: {xs:'3px'},
-
+      borderColor: {
+        'primary': '#6ca7f5',
+      }
     },
   },
   variants: {

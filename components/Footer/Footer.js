@@ -8,8 +8,8 @@ function Footer() {
 
     return(
         <footer className="bg-primary w-11/12 h-[300px] mt-10 flex flex-row justify-evenly rounded-3xl">
-            <div className="rounded-3xl overflow-hidden">
-            <Image src="/images/logox.png" alt="logo" width={250} height={100} />
+            <div className="rounded-3xl overflow-hidden flex flex-row items-center">
+            <Image src="/images/big_logo_b.png" alt="logo" width={250} height={100} />
 </div>
             <div className="flex flex-col mt-10">
                 <p className="text-white text-2xl font-bold mb-2">Contact Us</p>

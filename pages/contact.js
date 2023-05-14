@@ -14,20 +14,24 @@ export default function Contact() {
         <form className="flex flex-col items-center">
             <div className="flex flex-row">
                 <div className="m-5">
-            <label className="text-accent text-lg font-bold m-2" htmlFor="name">Name</label>
+            <label className="text-accent text-lg font-bold m-5" htmlFor="name">Name</label>
             
-            <input className="border-2 border-[#79b473] rounded-3xl p-2 w-full " type="text" id="name" name="name" placeholder="Your name.."/>
+            <input className="border-2 border-primary rounded-3xl p-2 w-full " type="text" id="name" name="name" placeholder="Your name.."/>
             </div>
             <div className="m-5">
-             <label className="text-accent text-lg font-bold m-2" htmlFor="email">Email</label>
-            <input className="border-2 border-[#79b473] rounded-3xl p-2 w-full " type="email" id="email" name="email" placeholder="Your email.."/>
+             <label className="text-accent text-lg font-bold m-5" htmlFor="email">Email</label>
+            <input className="border-2 border-primary rounded-3xl p-2 w-full " type="email" id="email" name="email" placeholder="Your email.."/>
+            </div>
+            <div className="m-5">
+             <label className="text-accent text-lg font-bold m-5" htmlFor="phone">Phone</label>
+            <input className="border-2 border-primary rounded-3xl p-2 w-full " type="string" id="phone" name="phone" placeholder="Your email.."/>
             </div>
            </div>
-           <div className="m-5">
-            <label className="text-accent text-lg font-bold m-5" htmlFor="subject">Subject</label>
-            <textarea className="border-2 border-[#79b473] rounded-3xl p-2" id="subject" name="subject" placeholder="Write something.."></textarea>  
+           <div className="flex flex-col w-full">
+            <label className="text-accent text-lg font-bold text-center m-5" htmlFor="subject">Subject</label>
+            <textarea className="border-2 border-primary rounded-3xl p-2 h-[200px]" id="subject" name="subject" placeholder="Write something.."></textarea>  
                 </div>
-                <input className="border-2 border-[#79b473] rounded-3xl p-2 w-2/5" type="submit" value="Submit"/>
+                <input className="border-2 border-primary rounded-3xl p-2 w-2/5 m-6 text-accent hover:font-bold hover:cursor-pointer" type="submit" value="Send"/>
         </form>
         </div>
         </div>
