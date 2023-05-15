@@ -35,7 +35,7 @@ export default function Home() {
       <Header />
       <div className="pt-28 w-10/12 mx-auto">
         <div className="relative">
-          <Image src="/images/hero.png" alt="logo" width={1920} height={1080} />
+          <Image src="/images/hero_1.png" alt="logo" width={1440} height={768} />
           <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="bg-opacity-50 backdrop-filter backdrop-blur-xs p-4 rounded-lg">
               <p className="font-freehand text-5xl text-white text-center">
@@ -49,18 +49,11 @@ export default function Home() {
         <ServiceCard
           title={"Our Services"}
           listArray={[
-            "Garden design and planning",
-            "Installation of new plants, shrubs, and trees",
-            "Lawn care and maintenance, including mowing and fertilizing",
-            "Soil preparation and conditioning for flower beds and gardens",
-            "Garden bed construction and maintenance",
-            "Irrigation system installation and maintenance",
-            "Tree pruning and trimming",
-            "Seasonal cleanup and debris removal",
-            "Hardscaping, including patio and walkway installation",
-            "Fence and gate installation and repair",
-            "Outdoor lighting installation and maintenance",
-            "Sustainable landscaping practices, such as rainwater harvesting and composting",
+            "Fence & Decking Services",
+            "Artificial Grass",
+            "Porcelain Patio",
+            "Victorian Pathways",
+            "Painting",
           ]}
         />
 
@@ -80,8 +73,8 @@ export default function Home() {
         />
       </div>
       <GallerySlide images={images} 
-      description={<>Our gallery is a testament to the hard work and dedication we put into every project. With every garden design and maintenance task, we pour our heart and soul into creating outdoor spaces that are not just beautiful, but also functional and sustainable. <br/> <br/> Our portfolio showcases the incredible results of this commitment - from lush greenery and vibrant flowers to elegant hardscaping and thoughtful water features. We believe that your outdoor space should be an extension of your home and your personal style, and we work tirelessly to make that vision a reality.</>} 
-      title={'Portfolio Preview'}
+      description={<> Below is a curated showcase of our diverse gardening services. Here, you'll find a rich tapestry of our work, encompassing everything from elegant fences and decks to stunning patios, charming pathways, and vibrant painting transformations. As you browse through, witness how we've transformed ordinary outdoor spaces into extraordinary garden paradises, embodying our commitment to exceptional craftsmanship, innovative design, and attention to detail.</>} 
+      title={'Our Work'}
       />
       <Footer />
     </div>

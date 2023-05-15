@@ -24,7 +24,7 @@ export default function Contact() {
             </div>
             <div className="m-5">
              <label className="text-accent text-lg font-bold m-5" htmlFor="phone">Phone</label>
-            <input className="border-2 border-primary rounded-3xl p-2 w-full " type="string" id="phone" name="phone" placeholder="Your email.."/>
+            <input className="border-2 border-primary rounded-3xl p-2 w-full " type="string" id="phone" name="phone" placeholder="Your phone number.."/>
             </div>
            </div>
            <div className="flex flex-col w-full">

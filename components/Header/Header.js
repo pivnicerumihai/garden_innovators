@@ -11,10 +11,10 @@ function Header() {
            <li> <Link href='/'>Home</Link></li>
            <li> <Link href='/services_prices'>Services & Prices</Link></li>
            <li><Link href='/contact'>Contact</Link></li> 
-           <li> <Link href='/'>About</Link></li>
+           <li> <Link href='/about'>About</Link></li>
           </ul>
-          <div className="-mb-14">
-            <Image src="/images/logo_e.png" alt="logo" width={150} height={100} />
+          <div className="-mb-12">
+            <Image src="/images/logo_g.png" alt="logo" width={150} height={100} />
           </div>
         </div>
       </nav>

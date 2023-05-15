@@ -37,12 +37,23 @@ export default function Services() {
     victorianPathways: images_1,
   };
 
+  const servicesDescription = {
+    fenceAndDecking: "Our comprehensive fence and decking services ensure that your garden not only has the privacy you desire but also the perfect space for relaxation or entertainment. From initial design to final installation, we provide a range of options using high-quality materials that are durable and weather-resistant. Whether you're looking for a traditional wooden fence or a modern composite deck, our team can deliver a result that complements your outdoor space and meets your specific needs.",
+    artificialGrass: 'Artificial grass offers an excellent low-maintenance alternative to natural lawns, maintaining a lush, green appearance all year round without the need for watering, mowing, or fertilizing. We provide high-quality, pet-friendly, and eco-friendly artificial grass options that can withstand heavy foot traffic while still looking great. Our team handles everything from the ground preparation, installation, to the finishing touches, ensuring a seamless and professional finish.',
+    porcelainPatito: "A porcelain patio can significantly enhance the aesthetic of your outdoor area, creating a chic and modern space that's perfect for entertaining or relaxing. Porcelain is known for its durability, non-slip properties, and resistance to weather extremes, making it an excellent choice for patios. Our team can design and install a variety of styles, colors, and patterns to create a custom look that matches your home and lifestyle.",
+    victorianPathways: "Add a touch of elegance and charm to your garden with our Victorian pathway services. These pathways feature distinctive patterns and a blend of rich, traditional colors, reflecting the style of the Victorian era. Using high-quality, durable materials, we meticulously craft these pathways to serve as a beautiful and practical addition to your outdoor space."
+  }
+
   const [gallery, setGallery] = useState(services.fenceAndDecking);
   const [selectedService, setSelectedService] = useState('fenceAndDecking');
+  const [title,setTitle] = useState('Fence & Decking');
+  const [description,setDescription] = useState(servicesDescription.fenceAndDecking);
 
-  const handleButtonClick = (serviceKey) => {
+  const handleButtonClick = (serviceKey, title) => {
     setGallery(services[serviceKey]);
     setSelectedService(serviceKey);
+    setTitle(title);
+    setDescription(servicesDescription[serviceKey]);
   }
 
   return (
@@ -52,27 +63,27 @@ export default function Services() {
         <div className="flex flex-row justify-center mt-10 bg-primary rounded-full">
           <button 
             className={`font-bold py-2 px-4 rounded-full transition-colors duration-200 ease-in-out ${selectedService === 'fenceAndDecking' ? 'bg-white text-accent' : 'bg-primary text-white hover:bg-white hover:text-accent'}`} 
-            onClick={() => handleButtonClick('fenceAndDecking')}>
+            onClick={() => handleButtonClick('fenceAndDecking','Fence & Decking')}>
             Fence & Decking
           </button>
           <button 
             className={`font-bold py-2 px-4 rounded-full transition-colors duration-200 ease-in-out ${selectedService === 'artificialGrass' ? 'bg-white text-accent' : 'bg-primary text-white hover:bg-white hover:text-accent'}`} 
-            onClick={() => handleButtonClick('artificialGrass')}>
+            onClick={() => handleButtonClick('artificialGrass', 'Artifical Grass')}>
             Artificial Grass
           </button>
           <button 
             className={`font-bold py-2 px-4 rounded-full transition-colors duration-200 ease-in-out ${selectedService === 'porcelainPatito' ? 'bg-white text-accent' : 'bg-primary text-white hover:bg-white hover:text-accent'}`} 
-            onClick={() => handleButtonClick('porcelainPatito')}>
+            onClick={() => handleButtonClick('porcelainPatito', 'Porcelatin Patio')}>
             Porcelain Patito
           </button>
           <button 
             className={`font-bold py-2 px-4 rounded-full transition-colors duration-200 ease-in-out ${selectedService === 'victorianPathways' ? 'bg-white text-accent' : 'bg-primary text-white hover:bg-white hover:text-accent'}`} 
-            onClick={() => handleButtonClick('victorianPathways')}>
+            onClick={() => handleButtonClick('victorianPathways', 'Victorian Pathways')}>
             Victorian Pathways
           </button>
      
         </div>
-        <GallerySlide images={gallery} title={'Fence Building'} description={<>Step into a visual journey through our captivating garden projects with our stunning gallery slideshow. Immerse yourself in a captivating display of lush landscapes, meticulously designed outdoor spaces, and intricate details that showcase our dedication to creating extraordinary gardens.<br/><br/> Watch as the seasons unfold, revealing the vibrant colors of blooming flowers, the tranquil ambiance of serene water features, and the harmony between nature and artistry. Our gallery slideshow invites you to explore the transformative power of our work, inspiring you to envision the possibilities for your own outdoor sanctuary. Sit back, relax, and let the captivating imagery take you on an enchanting garden adventure.</>}/>
+        <GallerySlide images={gallery} title={title} description={description}/>
       </div>
       <Footer/>
     </div>
