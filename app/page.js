@@ -6,24 +6,20 @@ import Footer from "@/components/Footer/Footer";
 
 const images = [
   {
-    url: "/images/gallery_1.png",
+    url: "/images/gallery_1_1.svg",
     alt: "Image 1",
   },
   {
-    url: "/images/gallery_2.png",
+    url: "/images/gallery_2.svg",
     alt: "Image 2",
   },
   {
-    url: "/images/gallery_3.png",
+    url: "/images/gallery_3_2.svg",
     alt: "Image 3",
   },
   {
-    url: "/images/gallery_4.png",
+    url: "/images/gallery_4.svg",
     alt: "Image 4",
-  },
-  {
-    url: "/images/gallery_5.png",
-    alt: "Image 5",
   },
 ];
 
@@ -34,20 +30,20 @@ export default function Home() {
     <div className="flex flex-col items-center">
       <Header />
       <div className="pt-28 w-10/12 mx-auto">
-        <div className="relative">
-          <Image src="/images/hero_1.png" alt="logo" width={1440} height={768} />
+        <div className="relative rounded-xl overflow-hidden">
+          <Image src="/images/hero_final.png" alt="logo" width={1440} height={768} />
           <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="bg-opacity-50 backdrop-filter backdrop-blur-xs p-4 rounded-lg">
-              <p className="font-freehand text-5xl text-white text-center">
+            <div className="bg-opacity-50 backdrop-filter backdrop-blur-xs p-1 rounded-xl">
+              <p className="font-freehand text-5xl  text-white text-center">
                 Transforming Outdoors <br /> Crafting Paradises
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center mt-20">
+      <div className="flex flex-row  mt-20 w-4/5">
         <ServiceCard
-          title={"Our Services"}
+          title={"Services"}
           listArray={[
             "Fence & Decking Services",
             "Artificial Grass",
@@ -58,7 +54,7 @@ export default function Home() {
         />
 
         <ServiceCard
-          title={"Orientative Prices"}
+          title={"Prices"}
           listArray={[
             "Item One: £25",
             "Item Two: 35£",
