@@ -1,0 +1,19 @@
+.hover-underline-animation {
+    position: relative;
+  }
+  
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s;
+  }
+  
+  .hover-underline-animation:hover::after {
+    width: 100%;
+  }
+  

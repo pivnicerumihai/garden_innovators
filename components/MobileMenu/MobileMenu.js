@@ -2,6 +2,27 @@ import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon, MenuIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
+import styles from '../Header/Header.module.css'
+import GallerySlide from '../GallerySlide/GallerySlide'
+
+const images = [
+  {
+    url: "/images/gallery_1_1.svg",
+    alt: "Image 1",
+  },
+  {
+    url: "/images/gallery_2.svg",
+    alt: "Image 2",
+  },
+  {
+    url: "/images/gallery_3_2.svg",
+    alt: "Image 3",
+  },
+  {
+    url: "/images/gallery_4.svg",
+    alt: "Image 4",
+  },
+];
 
 export default function MobileMenu({ open, setOpen }) {
   return (
@@ -33,7 +54,7 @@ export default function MobileMenu({ open, setOpen }) {
           leaveTo="transform translate-x-full"
         >
           <div className="relative max-w-xs w-full bg-primary shadow-xl pb-12 flex flex-col overflow-y-auto">
-            <div className="px-4 pt-5 pb-2 flex">
+            <div className="px-4 mt-36 pb-2 flex">
               <button
                 type="button"
                 className="-mr-2 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -43,18 +64,25 @@ export default function MobileMenu({ open, setOpen }) {
                 <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </button>
             </div>
-            <div className="px-2 space-y-10 flex flex-col items-center text-xl text-white">
+              <ul className='px-2 space-y-10 flex flex-col items-center text-xl text-white'>
+                <li className={`${styles['hover-underline-animation']} cursor-pointer`}>
               <Link href="/">
                 Home
               </Link>
-              <Link href="/services">
-             Services & Prices </Link>
+              </li>
+              <li className={`${styles['hover-underline-animation']} cursor-pointer`}>
               <Link href="/contact">
              Contact </Link>
+             </li>
+             <li className={`${styles['hover-underline-animation']} cursor-pointer`}>
               <Link href="/about">
            About   </Link>
+           </li>
+           </ul>
+
+           <GallerySlide images={images}/>
             </div>
-          </div>
+
         </Transition.Child>
       </Dialog>
     </Transition.Root>

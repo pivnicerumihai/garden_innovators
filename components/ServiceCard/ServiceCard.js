@@ -1,25 +1,14 @@
-import React from "react";
-
-function ServiceCard({ title, listArray, icon, className }) {
+export default function ServiceCard({ items, title }) {
   return (
-    <div
-      className={`${
-        className ? className : ""
-      } flex flex-col items-center border-2 p-5 mx-10 border-[#6ca7f5] rounded-3xl h-[500px] w-3/4`}
-    >
-      <h2 className="text-3xl font-bold text-accent p-2 text-center">{title}</h2>
- 
-      <ul className="pt-10 overflow-y-auto flex flex-col">
-        {listArray.map((item, index) => {
-          return (
-            <li key={index} className="py-1 font-rubik text-lg">
-              &#x2022; {item}
-            </li>
-          );
-        })}
+    <div className="serviceCard rounded-lg shadow-lg p-8 px-16 bg-white">
+      <h3 className="text-2xl font-bold mb-8 text-center text-accent">{title}</h3>
+      <ul className="space-y-4 text-center">
+        {items.map((item, index) => (
+          <li key={index} className="text-lg md:text-xl">
+            {item}
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
-
-export default ServiceCard;
