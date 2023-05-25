@@ -31,7 +31,7 @@ function Footer() {
             <FaInstagram size="2em" color="#C13584" className="mx-2" />
           </div>
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/4 mb-8 text-center sm:text-left">
+        <div className="w-full sm:w-1/2 md:w-1/4 text-center sm:text-left">
           <p className="text-white text-2xl font-bold">Links</p>
           <ul className="flex flex-col items-center sm:items-start mt-4 text-white font-rubik">
             <li className={`cursor-pointer`}><Link href="/">Home</Link></li>
