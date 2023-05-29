@@ -4,29 +4,29 @@ import GallerySlide from "@/components/GallerySlide/GallerySlide";
 import { useState } from "react";
 
 const images_1 = [{
-  url: "/images/portfolio_fence_1.png",
+  url: "/images/fencing/fence-1.png",
   alt:'fence_1'
 },{
-  url: "/images/portfolio_fence_2.png",
-  alt:'fence_2'
+  url: "/images/fencing/fence-2.png",
+    alt:'fence_2'
 },{
-  url: "/images/portfolio_fence_3.png",
+  url: "/images/fencing/fence-3.png",
   alt:'fence_3'
 },{
-  url: "/images/portfolio_fence_4.png",
+  url: "/images/fencing/fence-4.png",
   alt:'fence_4'
 },];
 const images_2 = [{
-  url: "/images/portfolio_tiles_1.png",
-  alt:'tiles_1'
+  url: "/images/decking/decking-1.png",
+    alt:'tiles_1'
 },{
-  url: "/images/portfolio_tiles_2.png",
+  url: "/images/decking/decking-2.png",
   alt:'tiles_2'
 },{
-  url: "/images/portfolio_tiles_3.png",
+  url: "/images/decking/decking-3.png",
   alt:'tiles_3'
 },{
-  url: "/images/portfolio_tiles_4.png",
+  url: "/images/decking/decking-4.png",
   alt:'tiles_4'
 },];
 export default function Services() {

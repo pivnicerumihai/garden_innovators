@@ -5,24 +5,32 @@ import Link from 'next/link'
 import styles from '../Header/Header.module.css'
 import GallerySlide from '../GallerySlide/GallerySlide'
 
-const images = [
-  {
-    url: "/images/gallery_1_1.svg",
-    alt: "Image 1",
-  },
-  {
-    url: "/images/gallery_2.svg",
-    alt: "Image 2",
-  },
-  {
-    url: "/images/gallery_3_2.svg",
-    alt: "Image 3",
-  },
-  {
-    url: "/images/gallery_4.svg",
-    alt: "Image 4",
-  },
-];
+const images = [{
+  url: "/images/fencing/fence-1.png",
+  alt:'fence_1'
+},{
+  url: "/images/fencing/fence-2.png",
+    alt:'fence_2'
+},{
+  url: "/images/fencing/fence-3.png",
+  alt:'fence_3'
+},{
+  url: "/images/fencing/fence-4.png",
+  alt:'fence_4'
+},];
+const images_2 = [{
+  url: "/images/decking/decking-1.png",
+    alt:'tiles_1'
+},{
+  url: "/images/decking/decking-2.png",
+  alt:'tiles_2'
+},{
+  url: "/images/decking/decking-3.png",
+  alt:'tiles_3'
+},{
+  url: "/images/decking/decking-4.png",
+  alt:'tiles_4'
+},];
 
 export default function MobileMenu({ open, setOpen }) {
   return (
