@@ -11,11 +11,9 @@ const AboutUs = () => {
         <section className="pt-28 px-5 md:px-20">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-accent text-center">About Us</h1>
           <div className="text-center text-lg">
+           
             <p className="mb-8">
-              Elegance Engineered is a home improvement company based in London. Our story began in 2010 when our founder, Ion Tiron Cristian, decided to turn his passion for gardening and landscaping into a thriving business.
-            </p>
-            <p className="mb-8">
-              Since then, we have been dedicated to transforming our clients' homes and gardens, always prioritizing their visions and needs. Our services range from fence and decking installations, artificial grass applications, porcelain patio setups, Victorian pathway designs, to intricate painting projects. We're proud to say that we've brought many gardening dreams to life!
+              We are a team dedicated to transforming our clients' homes and gardens, always prioritizing their visions and needs. Our services range from fence and decking installations, artificial grass applications, porcelain patio setups, Victorian pathway designs, to intricate painting projects. We're proud to say that we've brought many gardening dreams to life!
             </p>
             <p className="mb-8">
               What sets us apart is our commitment to exceptional craftsmanship, innovative design, and attention to detail. We believe that an outdoor space can be both functional and aesthetic, and our mission is to create gardens that are a testament to that. We invite you to explore our work and look forward to the possibility of making your gardening dreams a reality.

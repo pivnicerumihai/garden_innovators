@@ -1,27 +1,38 @@
-import sgMail from "@sendgrid/mail";
+import axios from 'axios';
+import sgMail from '@sendgrid/mail';
+sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
 export default async function handler(req, res) {
-    let { name, email, phone, subject } = req.body;
+    const { name, email, phone, subject, captcha } = req.body;
 
-    sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
+    // Verify the captcha
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    const verificationURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}`;
+    const response = await axios.post(verificationURL);
+    const captchaIsValid = response.data.success;
 
+    console.log(captchaIsValid)
+    if (!captchaIsValid) {
+        res.status(400).json({ message: 'Invalid captcha.' });
+        return;
+    }
+
+    // Send the email
     const msg = {
-        to: 'contact@elegance-engineering.co.uk', 
+        to: 'contact@elegance-engineering.co.uk',
         from: 'contact@elegance-engineering.co.uk',
-        subject: "Contact Form Message",
-        html: `<p>You have a new contact form submission</p><br>
-        <p><strong>Name: </strong> ${name} </p><br>
-        <p><strong>Email: </strong> ${email} </p><br>
-        <p><strong>Phone: </strong> ${phone} </p><br>
-        <p><strong>Message: </strong> ${subject} </p><br>`,
+        subject: 'New Contact Form Submission',
+        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${subject}`,
     };
 
     try {
         await sgMail.send(msg);
-        console.log("Message sent");
-        res.status(200).json({ status: 'Ok' });
-    } catch(err) {
-        console.log(err);
-        res.status(500).json({ error: 'Error in email sending' });
+        res.status(200).json({ success: true });
+    } catch (error) {
+        console.error(error);
+        if (error.response) {
+            console.error(error.response.body)
+        }
+        res.status(500).json({ success: false });
     }
 }

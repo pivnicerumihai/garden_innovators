@@ -32,8 +32,11 @@ export default function Contact() {
 
     // Clear the form and the captcha
     if (data.success) {
-        setCaptchaValue(true);
+        setCaptchaValue("");
         e.target.reset();
+    }
+    else{
+      console.log(data)
     }
 }
 
@@ -139,11 +142,12 @@ export default function Contact() {
                   placeholder="Your message.."
                 ></textarea>
               </div>
+              <div className="flex flex-col items-center justify-center">
               <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 onChange={handleCaptchaResponseChange}
               />
-
+            </div>
               <input
                 className="border-2 border-primary rounded-lg p-2 w-2/5 m-6 text-accent hover:font-bold hover:cursor-pointer"
                 type="submit"
